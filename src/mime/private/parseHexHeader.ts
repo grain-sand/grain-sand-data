@@ -7,11 +7,7 @@ export async function parseHexHeader(header: Uint8Array | ArrayBuffer | Blob): P
 
 	// console.log('L1',':',hexString)
 
-	const numbers = getMagicNumbers();
-	if (numbers.has(hexString)) {
-		return numbers.get(hexString) as MimeTypes;
-	}
-	for (const [magic, mimeType] of numbers) {
+	for (const [magic, mimeType] of getMagicNumbers()) {
 		if (hexString.startsWith(magic)) {
 			return mimeType;
 		}

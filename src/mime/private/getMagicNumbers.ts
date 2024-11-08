@@ -2,8 +2,8 @@ import {MimeTypes} from "../MimeTypes";
 
 let magicNumbers: any;
 
-export const getMagicNumbers = (): Map<string, MimeTypes> => {
-	return magicNumbers || (magicNumbers = new Map([
+export const getMagicNumbers = (): [string, MimeTypes][] => {
+	return magicNumbers || (magicNumbers = [
 		// 文本类型
 		["EFBBBF", MimeTypes.TextUTF8],
 		["FEFF", MimeTypes.TextUTF16BE],
@@ -18,6 +18,8 @@ export const getMagicNumbers = (): Map<string, MimeTypes> => {
 		["424D", MimeTypes.BMP],
 		["00000100", MimeTypes.ICO],
 		["38425053", MimeTypes.PSD],
+		["52494646", MimeTypes.WebP],
+		["57454250", MimeTypes.WebP],
 
 		// 音频文件类型
 		["494433", MimeTypes.MP3],
@@ -34,6 +36,7 @@ export const getMagicNumbers = (): Map<string, MimeTypes> => {
 		["0000001866747970", MimeTypes.MP4],
 		["667479706d703432", MimeTypes.MP4],
 		["47", MimeTypes.MP2T],
+		["1A45DFA3", MimeTypes.WebM],
 
 		// 压缩文件类型
 		["504B0304", MimeTypes.ZIP],
@@ -53,5 +56,5 @@ export const getMagicNumbers = (): Map<string, MimeTypes> => {
 		//可执行文件
 		["MZ", MimeTypes.OctetStream],
 
-	]));
+	]);
 };

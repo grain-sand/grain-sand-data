@@ -3,11 +3,11 @@ import {parseHexHeader} from "./private/parseHexHeader";
 import {parseZipL2Header} from "./private/parseZipL2Header";
 import {parseTextHeader} from "./private/parseTextHader";
 
-const unknownHeaders: string[] = ['stream', 'unknown', 'binary', 'text/plain'];
+const unknownHeaders = /stream|unknown|binary|text|xml'/;
 
 export async function parseMime(header: Uint8Array | ArrayBuffer | Blob): Promise<MimeTypes | undefined> {
 	const blobType: string = (header as any).type || '';
-	if (blobType && !unknownHeaders.some(uh => blobType.includes(uh))) {
+	if (blobType && !unknownHeaders.test(blobType)) {
 		return blobType as any;
 	}
 
