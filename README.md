@@ -2,7 +2,7 @@
 ### English | [中文](README.cn.md)
 > A foundational library for reading and writing network or file data on the browser side<br/>
 > For local file read/write operations, [grain-sand-web-fs](https://www.npmjs.com/package/grain-sand-web-fs), built on top of this library, offers enhanced ease of use<br/>
-> For network data reading and downloading, [grain-sand-net](https://www.npmjs.com/package/grain-sand-net), also based on this library, provides a more convenient solution
+> For network data reading and downloading, [grain-sand-fetch](https://www.npmjs.com/package/grain-sand-fetch), also based on this library, provides a more convenient solution
 >> The main features include automatic type detection by file content and file extension analysis.
 
 > Automatically reads common browser-side data types based on content

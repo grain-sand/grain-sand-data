@@ -3,10 +3,10 @@ import {EncodingType, isNumber, isString} from "grain-sand-base";
 import {Base64DataURL} from "../general";
 import {SimpleDataReader} from "../simple";
 import {getExtensionMime, parseMime} from "../mime";
-import {miniToBlobType} from "./private/miniToBlobType";
 import {IBlobPackage} from "./IBlobPackage";
 import {readTextBlob, textBlobTypes} from "./private/readTextBlob";
 import {base64BlobTypes, readBase64Blob} from "./private/readBase64Blob";
+import {miniToBlobType} from "./miniToBlobType";
 
 export function readBlob(blob: Blob, encoding?: EncodingType): Promise<IBlobPackage>;
 

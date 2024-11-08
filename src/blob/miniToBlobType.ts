@@ -1,5 +1,5 @@
-import {MimeTypes} from "../../mime";
-import {BlobTypes} from "../BlobTypes";
+import {MimeTypes} from "../mime";
+import {BlobTypes} from "./BlobTypes";
 
 export function miniToBlobType(miniType: MimeTypes): BlobTypes {
 	switch(miniType) {
