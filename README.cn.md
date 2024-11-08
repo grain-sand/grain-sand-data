@@ -18,7 +18,7 @@ npx yarn add grain-sand-data
 ## 使用
 ### 自动判断数据类型 与 数据读取
 ```ts
-import {parseMime} from 'https://cdn.jsdmirror.cn/npm/grain-sand-data/lib/index.web.js'
+import {parseMime,getExtensionMime,readBlob} from 'https://cdn.jsdmirror.cn/npm/grain-sand-data/lib/index.web.js'
 
 const blob = await fetch('https://emoji.bj.bcebos.com/yige-aigc/index_aigc/final/toolspics/15.png').then(r=>r.blob());
 

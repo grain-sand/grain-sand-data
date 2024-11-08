@@ -19,7 +19,7 @@ npx yarn add grain-sand-data
 ## Usage
 ### Auto-detecting Data Types and Reading Data
 ```ts
-import {parseMime} from 'https://cdn.jsdmirror.cn/npm/grain-sand-data/lib/index.web.js'
+import {parseMime,getExtensionMime,readBlob} from 'https://cdn.jsdmirror.cn/npm/grain-sand-data/lib/index.web.js'
 
 const blob = await fetch('https://emoji.bj.bcebos.com/yige-aigc/index_aigc/final/toolspics/15.png').then(r => r.blob());
 

@@ -1,6 +1,6 @@
 {
   "name": "grain-sand-data-dev",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "scripts": {
     "build": "rollup -c --compact",
     "build-watch": "rollup -c --watch",
