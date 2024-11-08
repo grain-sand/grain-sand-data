@@ -4,6 +4,7 @@ import {SimpleDataHeaderPrefix, SimpleDataHeaderRegexp} from "../../simple/impl/
 
 const textHeaderTypes: [RegExp, MimeTypes][] = [
 	[/^<(!DOCTYPE\s+)?html/i, MimeTypes.HTML],
+	[/^<svg/i, MimeTypes.SVG],
 	[/^<(\?xml|\w+)/i, MimeTypes.XML],
 	[/^[{\[]/i, MimeTypes.JSON],
 	[/^8BPS/i, MimeTypes.PSD],
