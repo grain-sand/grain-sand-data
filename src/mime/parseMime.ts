@@ -7,6 +7,9 @@ const unknownHeaders = /stream|unknown|binary|text|xml'/;
 
 export async function parseMime(header: Uint8Array | ArrayBuffer | Blob): Promise<MimeTypes | undefined> {
 	const blobType: string = (header as any).type || '';
+
+	// console.log('blobType:', blobType)
+
 	if (blobType && !unknownHeaders.test(blobType)) {
 		return blobType as any;
 	}
@@ -19,5 +22,8 @@ export async function parseMime(header: Uint8Array | ArrayBuffer | Blob): Promis
 		return await parseZipL2Header(header)
 	}
 	textType = (!hexType || hexType.includes(MimeTypes.TextPlain as string)) ? await parseTextHeader(header) : '';
-	return (textType || blobType || hexType || undefined) as any;
+	if (unknownHeaders.test(hexType)) {
+		return (textType || blobType || hexType || undefined) as any;
+	}
+	return (textType || hexType || blobType || undefined) as any;
 }
