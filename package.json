@@ -9,7 +9,8 @@
     "test:gzip": "vitest gzip",
     "test:general": "vitest general",
     "test:mime": "vitest mime",
-    "test:simple": "vitest simple"
+    "test:simple": "vitest simple",
+    "test:blob": "vitest blob"
   },
   "dependencies": {
     "grain-sand-base": "0.1.7",
