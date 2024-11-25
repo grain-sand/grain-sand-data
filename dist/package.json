@@ -1,0 +1,34 @@
+{
+  "name": "grain-sand-data",
+  "version": "0.1.7",
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "js-base64": "^3.7.7",
+    "grain-sand-base": "^0.1.11"
+  },
+  "keywords": [
+    "file-type",
+    "web-file-type",
+    "browser-file-type",
+    "file read/write",
+    "mime type",
+    "file extension",
+    "文件类型分析",
+    "文件读写"
+  ],
+  "homepage": "https://gitee.com/grain-sand/grain-sand-data",
+  "preferred-homepages": [
+    "https://github.com/grain-sand/grain-sand-data"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grain-sand/grain-sand-data"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
