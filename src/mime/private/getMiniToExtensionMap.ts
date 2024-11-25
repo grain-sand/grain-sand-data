@@ -19,7 +19,7 @@ export const getMiniToExtensionMap = (): Record<MimeTypes, string> => {
 		[MimeTypes.Bat]: "bat",
 
 		// 图片类型
-		[MimeTypes.JPEG]: "jpeg",
+		[MimeTypes.JPEG]: "jpg",
 		[MimeTypes.PNG]: "png",
 		[MimeTypes.GIF]: "gif",
 		[MimeTypes.SVG]: "svg",

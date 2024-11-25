@@ -1,6 +1,6 @@
 {
   "name": "grain-sand-data-dev",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "scripts": {
     "build": "rollup -c --compact",
     "build-watch": "rollup -c --watch",
@@ -13,7 +13,7 @@
     "test:blob": "vitest blob"
   },
   "dependencies": {
-    "grain-sand-base": "0.1.7",
+    "grain-sand-base": "^0.1.11",
     "js-base64": "^3.7.7"
   },
   "devDependencies": {
