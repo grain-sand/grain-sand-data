@@ -15,7 +15,13 @@ export const textBlobTypes = [
 
 export type TextBlobType = typeof textBlobTypes[number];
 
+const parseEncodingRegex = /<meta[^>]+charset\s*=\s*["']?([\w-]+)|^<\?xml[^>]+encoding\s*=\s*"?([\w-]+)/i;
+
 export async function readTextBlob(blob: Blob, type: TextBlobType, encoding?: EncodingType): Promise<any> {
+	if (!encoding) {
+		const [, e1, e2] = parseEncodingRegex.exec(await blob.slice(0, 1024).text()) || [];
+		encoding = (e1 || e2) as any;
+	}
 	const text = await readBlobData(blob, "readAsText", encoding);
 	switch (type) {
 		case BlobTypes.Svg:
@@ -34,5 +40,5 @@ export async function readTextBlob(blob: Blob, type: TextBlobType, encoding?: En
 }
 
 function parseText(text: string, type: MimeTypes) {
-	return new (globalThis as any).DOMParser().parseFromString(text,type);
+	return new (globalThis as any).DOMParser().parseFromString(text, type);
 }
