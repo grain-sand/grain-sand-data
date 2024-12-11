@@ -1,13 +1,13 @@
 {
   "name": "grain-sand-data",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "dependencies": {
-    "js-base64": "^3.7.7",
-    "grain-sand-base": "^0.1.11"
+    "grain-sand-base": "*",
+    "js-base64": "^3.7.7"
   },
   "keywords": [
     "file-type",
